@@ -58,16 +58,17 @@
 
   
 
-3. (advanced) Drizzle + Truffle로 Dapp만들어보기
+3. (advanced) Drizzle + Truffle로 Dapp만들어보
 
-- git clone https://github.com/ethcon-kr/solidity-101-tutorial 
 - install npm
 - install truffle
   - npm install -g truffle
 - install ganache and run
   - https://truffleframework.com/ganache
   - execute 
-- at ethcon-examples folder
+- make empty directory(.e.g. ethcon-tutorial)
+  - truffle unbox drizzle
+- at ethcon-tutorial folder
   - npm install
   - truffle compile
   - truffle migrate
