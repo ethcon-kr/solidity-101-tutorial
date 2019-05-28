@@ -40,18 +40,39 @@
   - deploy버튼 클릭
   - etherscan에 제대로 배포됐나 확인(링크)
   - transfer 함수 사용해보기
+    - **0xc36083F1BD0f822bd57098b872D9b4Ac65cA98af** 에 1 (10**18) 토큰 보내기
+  - balanceOf 함수 사용해보기
+    - **0xc36083F1BD0f822bd57098b872D9b4Ac65cA98af** balance체크해보기
+  - transferFrom 함수 사용해보기
+    - approve 사용하기
+      - account 하나 더 만들기
+      - ropsten faucet받기
+      - 하나 더 만든 account 주소를 address 2이라 하고, 원래 컨트랙트 만든 주소를 address1라고 한다면
+        - address1 계정으로
+        - approve(address2, 1 (10**18)) 하기
+    - address2의 계정으로
+      - transferFrom(address1,address2,1 (10**18)) 하기
+      - 확인
+        - balanceOf(address2) == 1 (10**18)
+        - balanceOf(address1) == 발행량 - 20 (위에 이미 10토큰 보냈으므로)
 
   
 
-3. Drizzle + Truffle로 Dapp만들어보기
+3. (advanced) Drizzle + Truffle로 Dapp만들어보기
 
 - git clone https://github.com/ethcon-kr/solidity-101-tutorial 
 - install npm
 - install truffle
   - npm install -g truffle
+- install ganache and run
+  - https://truffleframework.com/ganache
+  - execute 
 - at ethcon-examples folder
+  - npm install
   - truffle compile
   - truffle migrate
+  - ropsten배포시 참고:https://medium.com/coinmonks/5-minute-guide-to-deploying-smart-contracts-with-truffle-and-ropsten-b3e30d5ee1e
 - at ethcon-examples/app folder
+  - select metamask to localhost:7545 (custom rpc)
   - npm run start
 
